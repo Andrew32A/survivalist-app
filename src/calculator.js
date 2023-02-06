@@ -14,4 +14,5 @@ class Calculator {
 
 export default Calculator
 
+console.log("change")
 console.log("hello")
