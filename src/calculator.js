@@ -6,6 +6,10 @@ class Calculator {
     hello() {
         console.log(this.demo)
     }
+
+    // TODO: make a water method
+
+    // TODO: make a food method
 }
 
 export default Calculator
