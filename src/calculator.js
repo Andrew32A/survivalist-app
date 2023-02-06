@@ -9,3 +9,5 @@ class Calculator {
 }
 
 export default Calculator
+
+console.log("hello")
