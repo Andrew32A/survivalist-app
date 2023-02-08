@@ -8,12 +8,8 @@ class Calculator {
     }
 
     // TODO: make a water method
-    waterCalculator(days, numOfPeople = 0) {
+    waterCalculator(numOfPeople = 0, waterByLiter) {
         // 3.7 L per person per day
-        let outputDays = 3.7 * numOfPeople
-        let result = outputDays * days
-        console.log(result)
-        return result
     }
 
     // TODO: make a food method
