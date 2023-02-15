@@ -30,7 +30,7 @@ class Calculator {
 }
 
 const newCaluculator = new Calculator("demo")
-newCaluculator.waterCalculator(100, 2)
+newCaluculator.waterCalculator(14, 2)
 newCaluculator.foodCalculator(1, 1)
 
 export default Calculator
