@@ -51,9 +51,9 @@ class Calculator {
         let result = outputDays * days 
         return result 
     }
-    
+
     //2,000kcal/person/day based on standard health consultation for recommended daily consumption for average adults.
-    foodCalculator(days, numAdults = 0, numChildren = 0, numPets = 0) {
+    foodCalculatorMaster(days, numAdults = 0, numChildren = 0, numPets = 0) {
         // 2,000 calories per day per person
         let outputDays = (2000 * numAdults) + (1400 * numChildren) + (400 * numPets)
         let result = outputDays * days 
@@ -74,8 +74,8 @@ class Calculator {
 }
 
 const newCaluculator = new Calculator("demo")
-newCaluculator.waterCalculator(100, 1, 1, 1)
-newCaluculator.foodCalculator(1, 1, 1, 1)
+newCaluculator.waterCalculatorMaster(100, 1, 1, 1)
+newCaluculator.foodCalculatorMaster(1, 1, 1, 1)
 let NutTest = newCaluculator.nutritionCalculator(1, 1, 1, 1)
 
 export default Calculator
