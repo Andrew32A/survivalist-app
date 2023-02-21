@@ -7,8 +7,6 @@ class Calculator {
         console.log(this.demo)
     }
 
-    // TODO: make a water method
-    //3.7L/person/day based on federal regulations and emergency preparedness recommendations.
     waterCalculator(days, numAdults = 0, numChildren = 0, numPets = 0) {
         // 3.7 L per person per day
         let outputDays = (3.7 * numAdults) + (2.0 * numChildren) + (1.3 * numPets)
@@ -17,9 +15,7 @@ class Calculator {
         return result
     }
 
-    // TODO: make a food method
     //2,000kcal/person/day based on standard health consultation for recommended daily consumption for average adults.
-    //Child logic to be added later.
     foodCalculator(days, numAdults = 0, numChildren = 0, numPets = 0) {
         // 2,000 calories per day per person
         let outputDays = (2000 * numAdults) + (1400 * numChildren) + (400 * numPets)
@@ -27,13 +23,25 @@ class Calculator {
         console.log(result)
         return result
     }
+
+    nutritionCalculator(days, numAdults = 0, numChildren = 0, numPets = 0) { 
+        const totalCalories = this.foodCalculator(days, numAdults, numChildren, numPets)
+        let protein = (totalCalories * 0.30)
+        let carbs = (totalCalories * 0.45)
+        let fats = (totalCalories * 0.25)
+        let NutResult = [protein, carbs, fats]
+        return NutResult
+    }
 }
 
 const newCaluculator = new Calculator("demo")
-newCaluculator.waterCalculator(100, 2)
-newCaluculator.foodCalculator(1, 1)
+newCaluculator.waterCalculator(100, 1, 1, 1)
+newCaluculator.foodCalculator(1, 1, 1, 1)
+let NutTest = newCaluculator.nutritionCalculator(1, 1, 1, 1)
 
 export default Calculator
 
-console.log("change")
+console.log(`protein ${NutTest[0]}`)
+console.log(`carbs ${NutTest[1]}`)
+console.log(`fats ${NutTest[2]}`)
 console.log("hello")
