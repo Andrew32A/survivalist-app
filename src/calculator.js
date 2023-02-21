@@ -31,7 +31,6 @@ class Calculator {
         console.log(result)
         return result
     }
-
         
     foodCalculatorAdult(days, numAdults = 0) { 
         let outputDays = (2000 * numAdults)
@@ -68,13 +67,11 @@ class Calculator {
         let NutResult = [protein, carbs, fats]
         return NutResult
     }
-
-    
 }
 
 export default Calculator
 
-const newCaluculator = new Calculator("demo")
+const newCaluculator = new Calculator(1, 1, 1, 1)
 newCaluculator.waterCalculatorMaster(100, 1, 1, 1)
 newCaluculator.foodCalculatorMaster(1, 1, 1, 1)
 

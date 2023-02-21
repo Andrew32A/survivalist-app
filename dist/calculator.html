@@ -51,6 +51,9 @@
                 <input id="fullNameInput" type="text" placeholder="Full name">
                 <input id="emailInput" type="text" placeholder="Email">
                 <input id="phoneInput" type="text" placeholder="Phone">
+
+                <p>Number of Days:</p>
+                <input id="numDaysInput" type="number" placeholder="Enter here">
                 
                 <p>Number of Adults:</p>
                 <input id="numAdultsInput" type="number" placeholder="Enter here">
@@ -70,10 +73,15 @@
     <section class="py-5 text-center container">
       <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">RESULTS</h1>
-          <form>
-              <p id="testOutput"></p>
-          </form>
+            <h1 class="fw-light">RESULTS</h1>
+              <p>Total Calories for Adults:</p>
+              <p id="adultOutput"> </p>
+
+              <p>Total Calories for Children:</p>
+              <p id="childrenOutput"> </p>
+
+              <p>Total Calories for Pets:</p>
+              <p id="petsOutput"> </p>
           </div>
       </div>
   </section>

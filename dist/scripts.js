@@ -1,22 +1,36 @@
 import Calculator from "../src/calculator.js"
 
-// input ids
-const numAdultsInput = document.getElementById("numAdultsInput");
-const numChildrenInput = document.getElementById("numChildrenInput");
-const numPetsInput = document.getElementById("numPetsInput");
-
 // output ids
-const testOutput = document.getElementById("testOutput")
+const adultOutput = document.getElementById("adultOutput");
+const childrenOutput = document.getElementById("childrenOutput");
+const petsOutput = document.getElementById("petsOutput");
 
 // TODO: add use for these fields somewhere else
 const fullNameInput = document.getElementById("fullNameInput");
 const emailInput = document.getElementById("emailInput");
 const phoneInput = document.getElementById("phoneInput");
 
-// TODO: add days input field and tie in here
-const days = 1
+document.addEventListener("keyup", (e) => {
+    // retrieve inputs
+    const numAdultsInput = document.getElementById("numAdultsInput").value;
+    const numChildrenInput = document.getElementById("numChildrenInput").value;
+    const numPetsInput = document.getElementById("numPetsInput").value;
+    const days = document.getElementById("numDaysInput").value;
 
-const calculatorObject = new Calculator(1, numAdultsInput, numChildrenInput, numPetsInput)
-const foodAdultOutput = calculatorObject.foodCalculatorAdult(1, numAdultsInput)
+    // instantiate calculator object with new inputs
+    const calculatorObject = new Calculator(days, numAdultsInput, numChildrenInput, numPetsInput)
 
-testOutput.innerHTML = foodAdultOutput
+    // calculate food
+    const foodAdultOutput = calculatorObject.foodCalculatorAdult(days, numAdultsInput)
+    const foodChildrenOutput = calculatorObject.foodCalculatorChild(days, numChildrenInput)
+    const foodPetsOutput = calculatorObject.foodCalculatorPets(days, numPetsInput)
+
+    // TODO: calculate water
+
+    // output food
+    adultOutput.innerHTML = foodAdultOutput;
+    childrenOutput.innerHTML = foodChildrenOutput;
+    petsOutput.innerHTML = foodPetsOutput;
+
+    // TODO: output water
+});
