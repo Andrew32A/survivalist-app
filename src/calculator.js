@@ -1,10 +1,9 @@
 class Calculator {
-    constructor(demo) {
-        this.demo = demo
-    }
-
-    hello() {
-        console.log(this.demo)
+    constructor(days=0, numAdults=0, numChildren=0, numPets=0) {
+        this.days = days;
+        this.numAdults = numAdults;
+        this.numChildren = numChildren;
+        this.numPets = numPets;
     }
 
     waterCalculatorAdult(days, numAdults = 0) { 
@@ -62,7 +61,7 @@ class Calculator {
     }
 
     nutritionCalculator(days, numAdults = 0, numChildren = 0, numPets = 0) { 
-        const totalCalories = this.foodCalculator(days, numAdults, numChildren, numPets)
+        const totalCalories = this.foodCalculatorMaster(days, numAdults, numChildren, numPets)
         let protein = (totalCalories * 0.30)
         let carbs = (totalCalories * 0.42)
         let fats = (totalCalories * 0.28)
@@ -73,14 +72,14 @@ class Calculator {
     
 }
 
+export default Calculator
+
 const newCaluculator = new Calculator("demo")
 newCaluculator.waterCalculatorMaster(100, 1, 1, 1)
 newCaluculator.foodCalculatorMaster(1, 1, 1, 1)
-let NutTest = newCaluculator.nutritionCalculator(1, 1, 1, 1)
 
-export default Calculator
+let NutTest = newCaluculator.nutritionCalculator(1, 1, 1, 1)
 
 console.log(`protein ${NutTest[0]}`)
 console.log(`carbs ${NutTest[1]}`)
 console.log(`fats ${NutTest[2]}`)
-console.log("hello")

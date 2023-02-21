@@ -17,14 +17,14 @@
             <div class="row">
               <div class="col-sm-8 col-md-7 py-4">
                 <h4 class="text-white">About</h4>
-                <p class="text-muted">Contingency planning application hehe~ :3</p>
+                <p class="text-muted">WePrep is built for uncertain times to help you <b>protect your family</b>. Make the best contingency plan for your family in minutes.</p>
               </div>
               <div class="col-sm-4 offset-md-1 py-4">
                 <h4 class="text-white">Links</h4>
                 <ul class="list-unstyled">
                   <li><a href="https://github.com/Andrew32A/survivalist-app" class="text-white">Repo</a></li>
-                  <li><a href="./dist/calculator.html" class="text-white">Calculator</a></li>
-                  <li><a href="./dist/info.html" class="text-white">Info</a></li>
+                  <li><a href="./calculator.html" class="text-white">Calculator</a></li>
+                  <li><a href="./info.html" class="text-white">Info</a></li>
                 </ul>
               </div>
             </div>
@@ -32,7 +32,7 @@
         </div>
         <div class="navbar navbar-dark bg-dark shadow-sm">
           <div class="container">
-            <a href="./index.html" class="navbar-brand d-flex align-items-center">
+            <a href="../index.html" class="navbar-brand d-flex align-items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
               <strong>WePrep</strong>
             </a>
@@ -48,23 +48,35 @@
             <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">GENERATE YOUR PREPPING PLAN</h1>
             <form>
-                <input type="text" placeholder="Full name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Phone">
+                <input id="fullNameInput" type="text" placeholder="Full name">
+                <input id="emailInput" type="text" placeholder="Email">
+                <input id="phoneInput" type="text" placeholder="Phone">
                 
                 <p>Number of Adults:</p>
-                <input type="number" placeholder="Enter here">
+                <input id="numAdultsInput" type="number" placeholder="Enter here">
 
                 <p>Number of Children:</p>
-                <input type="number" placeholder="Enter here">
+                <input id="numChildrenInput" type="number" placeholder="Enter here">
 
                 <p>Number of Pets:</p>
-                <input type="number" placeholder="Enter here">
+                <input id="numPetsInput" type="number" placeholder="Enter here">
 
                 <button type="submit">Submit</button>
             </form>
             </div>
         </div>
     </section>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">RESULTS</h1>
+          <form>
+              <p id="testOutput"></p>
+          </form>
+          </div>
+      </div>
+  </section>
+
 </body>
 </html>
