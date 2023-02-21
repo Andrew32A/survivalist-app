@@ -27,8 +27,8 @@ class Calculator {
     nutritionCalculator(days, numAdults = 0, numChildren = 0, numPets = 0) { 
         const totalCalories = this.foodCalculator(days, numAdults, numChildren, numPets)
         let protein = (totalCalories * 0.30)
-        let carbs = (totalCalories * 0.45)
-        let fats = (totalCalories * 0.25)
+        let carbs = (totalCalories * 0.42)
+        let fats = (totalCalories * 0.28)
         let NutResult = [protein, carbs, fats]
         return NutResult
     }
