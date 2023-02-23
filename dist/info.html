@@ -7,7 +7,9 @@
     <title>WePrep</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/info.css">
+    <script defer src="./js_styling/anime.js"></script>
+    <script defer src="./js_styling/easeOut.js"></script>
 </head>
 <body>
     <header>
@@ -42,29 +44,34 @@
         </div>
       </header>
     
-    <section class="natural-disaster-section">
-        <div class="natural-disaster-wrapper">
-            <h1 class="">NATURAL DISASTER</h1>
-            <p class="natural-disaster-p"> <!-- INSERT TEXT HERE --> Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    <div class="info-wrapper">
+        <section class="">
+            <div class="natural-disaster-wrapper" style="opacity: -2;">
+                <h1 class="">NATURAL DISASTER</h1>
+                <p class="natural-disaster-p"> <!-- INSERT TEXT HERE --> Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Eaque itaque ut est, consequatur ullam velit quo rem ex facilis nostrum eius corrupti, dolorum nemo atque, rerum omnis consectetur aliquid dolores.</p>
+                <img src="../src/images/fire2.jpeg" class="card-img-top" width="100%" height="300">
+            </div>
+        </section>
+
+        <section class="">
+            <div class="economic-disaster-wrapper" style="opacity: -2;">
+                <h1 class="">ECONOMIC DISASTER</h1>
+                <p class="economic-disaster-p"> <!-- INSERT TEXT HERE --> Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                     Eaque itaque ut est, consequatur ullam velit quo rem ex facilis nostrum eius corrupti, dolorum nemo atque, rerum omnis consectetur aliquid dolores.</p>
-        </div>
-    </section>
+                <img src="../src/images/economic1.jpeg" class="card-img-top" width="100%" height="300">
+            </div>
+        </section>
 
-    <section class="">
-        <div class="economic-disaster-wrapper">
-            <h1 class="">ECONOMIC DISASTER</h1>
-            <p class="economic-disaster-p"> <!-- INSERT TEXT HERE --> Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Eaque itaque ut est, consequatur ullam velit quo rem ex facilis nostrum eius corrupti, dolorum nemo atque, rerum omnis consectetur aliquid dolores.</p>
-        </div>
-    </section>
-
-    <section class="">
-        <div class="zombie-apocalypse-wrapper">
-            <h1 class="">ZOMBIE APOCALYPSE</h1>
-            <p class="zombie-apocalypse-p"> <!-- INSERT TEXT HERE --> Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Eaque itaque ut est, consequatur ullam velit quo rem ex facilis nostrum eius corrupti, dolorum nemo atque, rerum omnis consectetur aliquid dolores.</p>
-        </div>
-    </section>
+        <section class="">
+            <div class="zombie-apocalypse-wrapper" style="opacity: -2;">
+                <h1 class="">ZOMBIE APOCALYPSE</h1>
+                <p class="zombie-apocalypse-p"> <!-- INSERT TEXT HERE --> Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Eaque itaque ut est, consequatur ullam velit quo rem ex facilis nostrum eius corrupti, dolorum nemo atque, rerum omnis consectetur aliquid dolores.</p>
+                <img src="../src/images/zombie1.jpeg" class="card-img-top" width="100%" height="300">
+            </div>
+        </section>
+    </div>
 
 </body>
 </html>
