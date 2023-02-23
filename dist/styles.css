@@ -5,3 +5,43 @@
 /* p {
     font-size: 400px !important;
 } */
+
+.natural-disaster-wrapper, .zombie-apocalypse-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left !important;
+    padding: 6em;
+    padding-left: 10em;
+    padding-right: 15em;
+}
+
+.economic-disaster-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: right !important;
+    padding: 6em;
+    padding-left: 15em;
+    padding-right: 15em;
+}
+
+/* .natural-disaster-p {
+    
+} */
+
+/* .economic-disaster-p {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: right !important;
+    padding-top: 2em;
+}
+
+.zombie-apocalypse-p {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left !important;
+    padding-top: 2em;
+} */
