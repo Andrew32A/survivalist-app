@@ -1,9 +1,20 @@
-.natural-disaster-wrapper, .zombie-apocalypse-wrapper {
+.natural-disaster-wrapper{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     text-align: left !important;
-    padding: 6em;
+    padding: 10em;
+    padding-top: 5em;
+    padding-left: 10em;
+    padding-right: 15em;
+}
+
+.zombie-apocalypse-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left !important;
+    padding: 10em;
     padding-left: 10em;
     padding-right: 15em;
 }
@@ -13,7 +24,22 @@
     justify-content: flex-start;
     flex-direction: column;
     text-align: right !important;
-    padding: 6em;
+    padding: 10em;
     padding-left: 15em;
     padding-right: 15em;
+}
+
+.economic-disaster-wrapper > img {
+    margin-left: auto;
+    padding-top: 2em;
+    max-width: 50vw;
+    max-height: 50vh;
+    border-radius: 100px;
+}
+
+img {
+    max-width: 50vw;
+    max-height: 50vh;
+    padding-top: 2em;
+    border-radius: 100px;
 }
