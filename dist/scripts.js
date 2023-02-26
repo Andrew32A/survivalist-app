@@ -1,9 +1,13 @@
 import Calculator from "../src/calculator.js"
 
 // output ids
-const adultOutput = document.getElementById("adultOutput");
-const childrenOutput = document.getElementById("childrenOutput");
-const petsOutput = document.getElementById("petsOutput");
+const foodAdultOutput = document.getElementById("foodAdultOutput");
+const foodChildrenOutput = document.getElementById("foodChildrenOutput");
+const foodPetsOutput = document.getElementById("foodPetsOutput");
+
+const waterAdultOutput = document.getElementById("waterAdultOutput");
+const waterChildrenOutput = document.getElementById("waterChildrenOutput");
+const waterPetsOutput = document.getElementById("waterPetsOutput");
 
 // TODO: add use for these fields somewhere else
 const fullNameInput = document.getElementById("fullNameInput");
@@ -12,25 +16,32 @@ const phoneInput = document.getElementById("phoneInput");
 
 document.addEventListener("keyup", (e) => {
     // retrieve inputs
+    const days = document.getElementById("numDaysInput").value;
     const numAdultsInput = document.getElementById("numAdultsInput").value;
     const numChildrenInput = document.getElementById("numChildrenInput").value;
     const numPetsInput = document.getElementById("numPetsInput").value;
-    const days = document.getElementById("numDaysInput").value;
 
     // instantiate calculator object with new inputs
     const calculatorObject = new Calculator(days, numAdultsInput, numChildrenInput, numPetsInput)
 
     // calculate food
-    const foodAdultOutput = calculatorObject.foodCalculatorAdult(days, numAdultsInput)
-    const foodChildrenOutput = calculatorObject.foodCalculatorChild(days, numChildrenInput)
-    const foodPetsOutput = calculatorObject.foodCalculatorPets(days, numPetsInput)
+    const foodAdultCalculated = calculatorObject.foodCalculatorAdult(days, numAdultsInput)
+    const foodChildrenCalculated = calculatorObject.foodCalculatorChild(days, numChildrenInput)
+    const foodPetsCalculated = calculatorObject.foodCalculatorPets(days, numPetsInput)
 
     // TODO: calculate water
+    const waterAdultCalculated = calculatorObject.waterCalculatorAdult(days, numAdultsInput)
+    const waterChildrenCalculated = calculatorObject.waterCalculatorChild(days, numChildrenInput)
+    const waterPetsCalculated = calculatorObject.waterCalculatorPet(days, numPetsInput)
 
     // output food
-    adultOutput.innerHTML = foodAdultOutput;
-    childrenOutput.innerHTML = foodChildrenOutput;
-    petsOutput.innerHTML = foodPetsOutput;
+    foodAdultOutput.innerHTML = foodAdultCalculated;
+    foodChildrenOutput.innerHTML = foodChildrenCalculated;
+    foodPetsOutput.innerHTML = foodPetsCalculated;
 
     // TODO: output water
+    waterAdultOutput.innerHTML = waterAdultCalculated + " L";
+    waterChildrenOutput.innerHTML = waterChildrenCalculated + " L";
+    waterPetsOutput.innerHTML = waterPetsCalculated + " L";
+
 });
