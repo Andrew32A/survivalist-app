@@ -29,7 +29,7 @@ document.addEventListener("keyup", (e) => {
     const foodChildrenCalculated = calculatorObject.foodCalculatorChild(days, numChildrenInput)
     const foodPetsCalculated = calculatorObject.foodCalculatorPets(days, numPetsInput)
 
-    // TODO: calculate water
+    // calculate water
     const waterAdultCalculated = calculatorObject.waterCalculatorAdult(days, numAdultsInput)
     const waterChildrenCalculated = calculatorObject.waterCalculatorChild(days, numChildrenInput)
     const waterPetsCalculated = calculatorObject.waterCalculatorPet(days, numPetsInput)
@@ -39,9 +39,8 @@ document.addEventListener("keyup", (e) => {
     foodChildrenOutput.innerHTML = foodChildrenCalculated;
     foodPetsOutput.innerHTML = foodPetsCalculated;
 
-    // TODO: output water
+    // output water
     waterAdultOutput.innerHTML = waterAdultCalculated + " L";
     waterChildrenOutput.innerHTML = waterChildrenCalculated + " L";
     waterPetsOutput.innerHTML = waterPetsCalculated + " L";
-
 });
