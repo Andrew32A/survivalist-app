@@ -9,6 +9,9 @@ const waterAdultOutput = document.getElementById("waterAdultOutput");
 const waterChildrenOutput = document.getElementById("waterChildrenOutput");
 const waterPetsOutput = document.getElementById("waterPetsOutput");
 
+const foodTotal = document.getElementById("foodTotal");
+const waterTotal = document.getElementById("waterTotal");
+
 // TODO: add use for these fields somewhere else
 const fullNameInput = document.getElementById("fullNameInput");
 const emailInput = document.getElementById("emailInput");
@@ -34,13 +37,21 @@ document.addEventListener("keyup", (e) => {
     const waterChildrenCalculated = calculatorObject.waterCalculatorChild(days, numChildrenInput)
     const waterPetsCalculated = calculatorObject.waterCalculatorPet(days, numPetsInput)
 
+    // calculate total
+    const foodTotalCalculated = calculatorObject.foodCalculatorMaster(days, numAdultsInput, numChildrenInput, numPetsInput)
+    const waterTotalCalculated = calculatorObject.waterCalculatorMaster(days, numAdultsInput, numChildrenInput, numPetsInput)
+
     // output food
-    foodAdultOutput.innerHTML = foodAdultCalculated;
-    foodChildrenOutput.innerHTML = foodChildrenCalculated;
-    foodPetsOutput.innerHTML = foodPetsCalculated;
+    foodAdultOutput.innerHTML = foodAdultCalculated + " Calories";
+    foodChildrenOutput.innerHTML = foodChildrenCalculated + " Calories";
+    foodPetsOutput.innerHTML = foodPetsCalculated + " Calories";
 
     // output water
     waterAdultOutput.innerHTML = waterAdultCalculated + " L";
     waterChildrenOutput.innerHTML = waterChildrenCalculated + " L";
     waterPetsOutput.innerHTML = waterPetsCalculated + " L";
+
+    // output total
+    foodTotal.innerHTML = foodTotalCalculated + " Calories";
+    waterTotal.innerHTML = waterTotalCalculated + " L";
 });

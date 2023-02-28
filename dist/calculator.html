@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./css/calculator.css">
+    <script defer src="./js_styling/anime.js"></script>
+    <script defer src="./js_styling/easeOut.js"></script>
     <script defer src="./scripts.js" type="module"></script>
 </head>
 <body>
@@ -43,10 +45,10 @@
         </div>
       </header>
     
-    <section class="py-5 text-center container">
+    <section class="calculator-wrapper py-5 text-center container" style="opacity: -2;">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">GENERATE YOUR PREPPING PLAN</h1>
+            <h1 class="fw-light calc-title">GENERATE YOUR PREPPING PLAN</h1>
             <form class="user-input">
                 <!-- temp removed user info inputs until I find a use for it -->
 
@@ -72,39 +74,52 @@
         </div>
     </section>
 
-    <section class="food-results py-5 text-center container">
+    <section class="calculator-wrapper food-results py-5 text-center container border-top" style="opacity: -2;">
       <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">CALORIE RESULTS</h1>
-              <p>Total Calories for Adults:</p>
+              <h5>Total Calories for Adults:</h5>
               <p id="foodAdultOutput"> </p>
 
-              <p>Total Calories for Children:</p>
+              <h5>Total Calories for Children:</h5>
               <p id="foodChildrenOutput"> </p>
 
-              <p>Total Calories for Pets:</p>
+              <h5>Total Calories for Pets:</h5>
               <p id="foodPetsOutput"> </p>
           </div>
       </div>
     </section>
 
-    <section class="water-results py-5 text-center container">
+    <section class="calculator-wrapper water-results py-5 text-center container border-top" style="opacity: -2;">
       <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">WATER RESULTS</h1>
-              <p>Total Water for Adults:</p>
+              <h5>Total Water for Adults:</h5>
               <p id="waterAdultOutput"> </p>
 
-              <p>Total Water for Children:</p>
+              <h5>Total Water for Children:</h5>
               <p id="waterChildrenOutput"> </p>
 
-              <p>Total Water for Pets:</p>
+              <h5>Total Water for Pets:</h5>
               <p id="waterPetsOutput"> </p>
           </div>
       </div>
     </section>
 
-  <footer class="text-muted py-5 border-top">
+    <section class="calculator-wrapper total-results py-5 text-center container border-top" style="opacity: -2;">
+      <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">TOTAL RESULTS</h1>
+              <h5>Total Food:</h5>
+              <p id="foodTotal"> </p>
+
+              <h5>Total Water:</h5>
+              <p id="waterTotal"> </p>
+          </div>
+      </div>
+    </section>
+
+  <footer class="calculator-wrapper text-muted py-5 border-top" style="opacity: -2;">
     <div class="container">
       <p class="float-end mb-1">
         <a href="#">Back to top</a>

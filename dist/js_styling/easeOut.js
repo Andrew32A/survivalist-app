@@ -24,3 +24,12 @@ anime({
 	easing: "easeOutExpo",
 	delay: (el, i) => 200 * i,
 })
+
+anime({
+	targets: '.calculator-wrapper',
+	opacity: 2,
+	duration: 4800,
+	translateY: ["-30px", "0px"],
+	easing: "easeOutExpo",
+	delay: (el, i) => 200 * i,
+})
