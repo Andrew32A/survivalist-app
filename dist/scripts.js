@@ -12,6 +12,10 @@ const waterPetsOutput = document.getElementById("waterPetsOutput");
 const foodTotal = document.getElementById("foodTotal");
 const waterTotal = document.getElementById("waterTotal");
 
+const proteinTotal = document.getElementById("proteinTotal");
+const fatTotal = document.getElementById("fatTotal");
+const carbTotal = document.getElementById("carbTotal");
+
 // TODO: add use for these fields somewhere else
 const fullNameInput = document.getElementById("fullNameInput");
 const emailInput = document.getElementById("emailInput");
@@ -40,6 +44,9 @@ document.addEventListener("keyup", (e) => {
     // calculate total
     const foodTotalCalculated = calculatorObject.foodCalculatorMaster(days, numAdultsInput, numChildrenInput, numPetsInput)
     const waterTotalCalculated = calculatorObject.waterCalculatorMaster(days, numAdultsInput, numChildrenInput, numPetsInput)
+    const proteinTotalCalculated = calculatorObject.nutritionCalculator(days, numAdultsInput, numChildrenInput, numPetsInput)
+    const fatTotalCalculated = calculatorObject.nutritionCalculator(days, numAdultsInput, numChildrenInput, numPetsInput)
+    const carbTotalCalculated = calculatorObject.nutritionCalculator(days, numAdultsInput, numChildrenInput, numPetsInput)
 
     // output food
     foodAdultOutput.innerHTML = foodAdultCalculated + " Calories";
@@ -54,4 +61,7 @@ document.addEventListener("keyup", (e) => {
     // output total
     foodTotal.innerHTML = foodTotalCalculated + " Calories";
     waterTotal.innerHTML = waterTotalCalculated + " L";
+    proteinTotal.innerHTML = proteinTotalCalculated[0] + " Calories";
+    fatTotal.innerHTML = fatTotalCalculated[1] + " Calories";
+    carbTotal.innerHTML = carbTotalCalculated[2] + " Calories";
 });
