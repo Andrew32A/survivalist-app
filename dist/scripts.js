@@ -59,9 +59,9 @@ document.addEventListener("keyup", (e) => {
     waterPetsOutput.innerHTML = waterPetsCalculated + " L";
 
     // output total
-    foodTotal.innerHTML = foodTotalCalculated + " Calories";
-    waterTotal.innerHTML = waterTotalCalculated + " L";
-    proteinTotal.innerHTML = proteinTotalCalculated[0] + " Calories";
-    fatTotal.innerHTML = fatTotalCalculated[1] + " Calories";
-    carbTotal.innerHTML = carbTotalCalculated[2] + " Calories";
+    foodTotal.innerHTML = Math.floor(foodTotalCalculated) + " Calories";
+    waterTotal.innerHTML = Math.floor(waterTotalCalculated) + " L";
+    proteinTotal.innerHTML = Math.floor(proteinTotalCalculated[0]) + " Calories";
+    fatTotal.innerHTML = Math.floor(fatTotalCalculated[1]) + " Calories";
+    carbTotal.innerHTML = Math.floor(carbTotalCalculated[2]) + " Calories";
 });
